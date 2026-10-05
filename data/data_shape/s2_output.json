@@ -1,0 +1,45 @@
+{
+  "soil_raw": {
+    "properties": {
+      "phh2o": {
+        "value": 64,
+        "unit": "*10 pH",
+        "depth": "0-5cm"
+      },
+      "clay": {
+        "value": 280,
+        "unit": "g/kg",
+        "depth": "0-5cm"
+      },
+      "sand": {
+        "value": 340,
+        "unit": "g/kg",
+        "depth": "0-5cm"
+      },
+      "silt": {
+        "value": 380,
+        "unit": "g/kg",
+        "depth": "0-5cm"
+      },
+      "ocd": {
+        "value": 12,
+        "unit": "dg/cm3",
+        "depth": "0-5cm"
+      }
+    }
+  },
+  "weather_raw": {
+    "timezone": "Asia/Dhaka",
+    "daily": {
+      "time": ["2026-01-01", "2026-01-02", "2026-01-03"],
+      "temperature_2m_mean": [22.1, 22.8, 21.9],
+      "precipitation_sum": [0.0, 4.2, 1.1],
+      "et0_fao_evapotranspiration": [2.9, 3.1, 2.7]
+    }
+  },
+  "fetched_at": "2026-10-05T09:00:00+00:00",
+  "warnings": [
+    "SoilGrids pH is on the x10 scale (64, not 6.4); conversion happens in S3"
+  ],
+  "source": "SoilGrids + Open-Meteo, 2026-10-05"
+}
