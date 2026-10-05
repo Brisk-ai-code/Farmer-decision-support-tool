@@ -1,31 +1,103 @@
 {
   "soil_raw": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [90.4, 23.8]
+    },
     "properties": {
-      "phh2o": {
-        "value": 64,
-        "unit": "*10 pH",
-        "depth": "0-5cm"
-      },
-      "clay": {
-        "value": 280,
-        "unit": "g/kg",
-        "depth": "0-5cm"
-      },
-      "sand": {
-        "value": 340,
-        "unit": "g/kg",
-        "depth": "0-5cm"
-      },
-      "silt": {
-        "value": 380,
-        "unit": "g/kg",
-        "depth": "0-5cm"
-      },
-      "ocd": {
-        "value": 12,
-        "unit": "dg/cm3",
-        "depth": "0-5cm"
-      }
+      "layers": [
+        {
+          "name": "phh2o",
+          "unit_measure": {
+            "d_factor": 10,
+            "mapped_units": "pH*10",
+            "target_units": "pH"
+          },
+          "depths": [
+            {
+              "range": { "top_depth": 0, "bottom_depth": 5, "unit_depth": "cm" },
+              "label": "0-5cm",
+              "values": { "mean": 64 }
+            }
+          ]
+        },
+        {
+          "name": "clay",
+          "unit_measure": {
+            "d_factor": 10,
+            "mapped_units": "g/kg",
+            "target_units": "%"
+          },
+          "depths": [
+            {
+              "range": { "top_depth": 0, "bottom_depth": 5, "unit_depth": "cm" },
+              "label": "0-5cm",
+              "values": { "mean": 280 }
+            }
+          ]
+        },
+        {
+          "name": "sand",
+          "unit_measure": {
+            "d_factor": 10,
+            "mapped_units": "g/kg",
+            "target_units": "%"
+          },
+          "depths": [
+            {
+              "range": { "top_depth": 0, "bottom_depth": 5, "unit_depth": "cm" },
+              "label": "0-5cm",
+              "values": { "mean": 340 }
+            }
+          ]
+        },
+        {
+          "name": "silt",
+          "unit_measure": {
+            "d_factor": 10,
+            "mapped_units": "g/kg",
+            "target_units": "%"
+          },
+          "depths": [
+            {
+              "range": { "top_depth": 0, "bottom_depth": 5, "unit_depth": "cm" },
+              "label": "0-5cm",
+              "values": { "mean": 380 }
+            }
+          ]
+        },
+        {
+          "name": "soc",
+          "unit_measure": {
+            "d_factor": 10,
+            "mapped_units": "dg/kg",
+            "target_units": "g/kg"
+          },
+          "depths": [
+            {
+              "range": { "top_depth": 0, "bottom_depth": 5, "unit_depth": "cm" },
+              "label": "0-5cm",
+              "values": { "mean": 120 }
+            }
+          ]
+        },
+        {
+          "name": "nitrogen",
+          "unit_measure": {
+            "d_factor": 100,
+            "mapped_units": "cg/kg",
+            "target_units": "g/kg"
+          },
+          "depths": [
+            {
+              "range": { "top_depth": 0, "bottom_depth": 5, "unit_depth": "cm" },
+              "label": "0-5cm",
+              "values": { "mean": 120 }
+            }
+          ]
+        }
+      ]
     }
   },
   "weather_raw": {
